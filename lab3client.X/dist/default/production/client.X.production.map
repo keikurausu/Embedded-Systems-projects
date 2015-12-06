@@ -1,0 +1,48 @@
+Microchip Technology Inc, vv1.24 (0)
+
+Tool Name:
+  /opt/microchip/xc16/v1.24/bin/bin/../bin/elf-ld
+
+Command:
+  -p33FJ256MC710 \
+  -o \
+  dist/default/production/client.X.production.elf \
+  -L/opt/microchip/xc16/v1.24/bin/bin/.. \
+  -L/opt/microchip/xc16/v1.24/bin/bin/../../lib \
+  -L/opt/microchip/xc16/v1.24/bin/bin/../../lib/PIC24E \
+  -L/opt/microchip/xc16/v1.24/bin/bin/../../support/PIC24E/gld \
+  -L/opt/microchip/xc16/v1.24/bin/bin/../../lib/PIC24F \
+  -L/opt/microchip/xc16/v1.24/bin/bin/../../support/PIC24F/gld \
+  -L/opt/microchip/xc16/v1.24/bin/bin/../../lib/PIC24H \
+  -L/opt/microchip/xc16/v1.24/bin/bin/../../support/PIC24H/gld \
+  -L/opt/microchip/xc16/v1.24/bin/bin/../../lib/dsPIC30F \
+  -L/opt/microchip/xc16/v1.24/bin/bin/../../support/dsPIC30F/gld \
+  -L/opt/microchip/xc16/v1.24/bin/bin/../../lib/dsPIC33E \
+  -L/opt/microchip/xc16/v1.24/bin/bin/../../support/dsPIC33E/gld \
+  -L/opt/microchip/xc16/v1.24/bin/bin/../../lib/dsPIC33F \
+  -L/opt/microchip/xc16/v1.24/bin/bin/../../support/dsPIC33F/gld \
+  build/default/production/flexserial.o \
+  build/default/production/lab3_client.o \
+  build/default/production/crc16.o \
+  lcd.a \
+  --defsym=__MPLAB_BUILD=1 \
+  -Tp33FJ256MC710.gld.00 \
+  --stack=16 \
+  --check-sections \
+  --data-init \
+  --pack-data \
+  --handles \
+  --isr \
+  --no-gc-sections \
+  --fill-upper=0 \
+  --stackguard=16 \
+  --no-force-link \
+  --smart-io \
+  -Map=dist/default/production/client.X.production.map \
+  --report-mem \
+  -start-group \
+  --library=pic30-elf \
+  --library=m-elf \
+  --library=c-elf \
+  -end-group \
+
